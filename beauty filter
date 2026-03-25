@@ -1,0 +1,54 @@
+# 📸 Photo Filter Web App
+
+A simple and interactive photo filter web application built using HTML, CSS, and JavaScript.
+
+---
+
+## 🚀 Features
+- Upload images from your device
+- Apply filters like grayscale
+- Instant preview on canvas
+- Lightweight and fast
+
+---
+
+## 🛠️ Technologies Used
+- HTML5
+- CSS3
+- JavaScript (Canvas API)
+
+---
+
+## 📂 Project Structure
+
+---
+
+## ▶️ How to Use
+1. Open the app in your browser
+2. Upload an image
+3. Click on filter buttons (e.g., grayscale)
+4. See the result instantly
+
+---
+
+## 🌐 Live Demo
+(Add your GitHub Pages link here after deployment)
+
+Example:
+
+---
+
+## 📌 Future Improvements
+- Add more filters (brightness, contrast, sepia)
+- Download edited images
+- Mobile responsive design
+
+---
+
+## 👤 Author
+Your Name
+
+---
+
+## ⭐ Support
+If you like this project, please give it a ⭐ on GitHub!
