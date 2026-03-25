@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Photo Filter App</title>
+</head>
+<body>
+
+<h2>Photo Filter App</h2>
+
+<input type="file" id="upload">
+<br><br>
+
+<canvas id="canvas"></canvas>
+<br><br>
+
+<button onclick="grayscale()">Grayscale</button>
+
+<script>
+let canvas = document.getElementById("canvas");
+let ctx = canvas.getContext("2d");
+let img = new Image();
+
+document.getElementById("upload").onchange = function(e) {
+  let reader = new FileReader();
+  reader.onload = function(event) {
+    img.onload = function() {
+      canvas.width = img.width;
+      canvas.height = img.height;
+      ctx.drawImage(img, 0, 0);
+    }
+    img.src = event.target.result;
+  }
+  reader.readAsDataURL(e.target.files[0]);
+}
+
+function grayscale() {
+  let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  let data = imageData.data;
+
+  for (let i = 0; i < data.length; i += 4) {
+    let avg = (data[i] + data[i+1] + data[i+2]) / 3;
+    data[i] = data[i+1] = data[i+2] = avg;
+  }
+
+  ctx.putImageData(imageData, 0, 0);
+}
+</script>
+
+</body>
+</html>
